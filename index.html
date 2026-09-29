@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chooser</title>
+<meta name="description" content="Choisis entre deux options, au hasard ou non.">
+<meta name="theme-color" content="#12121a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app">
+
+  <h1 id="title" class="title">Chooser</h1>
+
+  <div class="card">
+
+    <div class="inputs">
+      <div class="input-group">
+        <span class="dot dot-a"></span>
+        <input id="optionA" type="text" placeholder="Option A" maxlength="40" autocomplete="off">
+      </div>
+      <div class="vs">ou</div>
+      <div class="input-group">
+        <span class="dot dot-b"></span>
+        <input id="optionB" type="text" placeholder="Option B" maxlength="40" autocomplete="off">
+      </div>
+    </div>
+
+    <button id="chooseBtn" class="choose-btn">Choisir</button>
+
+    <div id="result" class="result" hidden>
+      <div class="result-label">Résultat</div>
+      <div id="resultValue" class="result-value">—</div>
+    </div>
+
+    <p id="error" class="error" hidden>Entre les deux options avant de choisir.</p>
+
+  </div>
+
+  <p class="hint">v1.0</p>
+
+</main>
+
+<!-- Panneau caché : accessible par appui long (700ms) sur le titre "Chooser" -->
+<div id="hiddenOverlay" class="overlay" hidden>
+  <div class="panel">
+    <h2>Réglage caché</h2>
+
+    <label class="switch-row">
+      <span>Résultat prédéterminé</span>
+      <input type="checkbox" id="fixedToggle">
+    </label>
+
+    <div id="fixedChoiceRow" class="fixed-choice-row" hidden>
+      <label class="radio-row">
+        <input type="radio" name="fixedChoice" value="A" id="fixedA">
+        <span>Option A gagne</span>
+      </label>
+      <label class="radio-row">
+        <input type="radio" name="fixedChoice" value="B" id="fixedB">
+        <span>Option B gagne</span>
+      </label>
+    </div>
+
+    <p class="panel-note">Si désactivé : tirage 100% aléatoire.</p>
+
+    <button id="closePanel" class="panel-close">Fermer</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
