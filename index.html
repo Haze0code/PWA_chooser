@@ -21,17 +21,9 @@
 
   <div class="card">
 
-    <div class="inputs">
-      <div class="input-group">
-        <span class="dot dot-a"></span>
-        <input id="optionA" type="text" placeholder="Option A" maxlength="40" autocomplete="off">
-      </div>
-      <div class="vs">ou</div>
-      <div class="input-group">
-        <span class="dot dot-b"></span>
-        <input id="optionB" type="text" placeholder="Option B" maxlength="40" autocomplete="off">
-      </div>
-    </div>
+    <div id="optionsList" class="inputs"></div>
+
+    <button id="addOptionBtn" class="add-option-btn" type="button">+ Ajouter une option</button>
 
     <button id="chooseBtn" class="choose-btn">Choisir</button>
 
@@ -40,7 +32,7 @@
       <div id="resultValue" class="result-value">—</div>
     </div>
 
-    <p id="error" class="error" hidden>Entre les deux options avant de choisir.</p>
+    <p id="error" class="error" hidden>Entre au moins deux options avant de choisir.</p>
 
   </div>
 
@@ -58,16 +50,7 @@
       <input type="checkbox" id="fixedToggle">
     </label>
 
-    <div id="fixedChoiceRow" class="fixed-choice-row" hidden>
-      <label class="radio-row">
-        <input type="radio" name="fixedChoice" value="A" id="fixedA">
-        <span>Option A gagne</span>
-      </label>
-      <label class="radio-row">
-        <input type="radio" name="fixedChoice" value="B" id="fixedB">
-        <span>Option B gagne</span>
-      </label>
-    </div>
+    <div id="fixedChoiceRow" class="fixed-choice-row" hidden></div>
 
     <p class="panel-note">Si désactivé : tirage 100% aléatoire.</p>
 

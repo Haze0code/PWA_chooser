@@ -74,10 +74,8 @@ html, body {
   height: 10px;
   border-radius: 50%;
   flex: none;
+  background: var(--dot-color, var(--accent-a));
 }
-
-.dot-a { background: var(--accent-a); }
-.dot-b { background: var(--accent-b); }
 
 .input-group input {
   flex: 1;
@@ -93,12 +91,32 @@ html, body {
   color: var(--muted);
 }
 
-.vs {
-  text-align: center;
+.remove-option {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
   color: var(--muted);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.add-option-btn {
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-option-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .choose-btn {

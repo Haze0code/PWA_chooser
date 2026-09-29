@@ -1,4 +1,4 @@
-var CACHE_NAME = "chooser-cache-v1";
+var CACHE_NAME = "chooser-cache-v2";
 var ASSETS = [
   "./",
   "./index.html",
