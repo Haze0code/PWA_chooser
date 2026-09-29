@@ -168,6 +168,10 @@ html, body {
   z-index: 10;
 }
 
+.overlay[hidden] {
+  display: none;
+}
+
 .panel {
   width: 100%;
   max-width: 340px;
