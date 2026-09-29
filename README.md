@@ -2,6 +2,8 @@
 
 PWA très basique pour choisir entre deux options.
 
+Déployé automatiquement sur GitHub Pages à chaque push sur `main` : https://haze0code.github.io/PWA_chooser/
+
 ## Fonctionnement
 
 - Entrer deux options (texte libre) dans les champs Option A / Option B.
